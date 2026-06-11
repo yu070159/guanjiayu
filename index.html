@@ -501,8 +501,8 @@ NL.forEach(function(l){l.addEventListener('click',function(){var s=this.getAttri
 NB.addEventListener('click',sA);sA();
 
 var pU='内蒙古工业大学-管家玉.pdf',pN='内蒙古工业大学-管家玉.pdf',iF=window.location.protocol==='file:';
-function oP(){var a=document.createElement('a');a.href=encodeURI(pU);a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();document.body.removeChild(a);}
-function dP(){var u=encodeURI(pU);if(iF){var a=document.createElement('a');a.href=u;a.download=pN;document.body.appendChild(a);a.click();document.body.removeChild(a);sT('⬇ 正在下载简历..');}else{sT('📜 正在下载简历..');fetch(u).then(function(r){if(!r.ok)throw Error();return r.blob();}).then(function(b){var u=URL.createObjectURL(new Blob([b],{type:'application/pdf'}));var a=document.createElement('a');a.href=u;a.download=pN;document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u);},2000);sT('✓ 下载完成');}).catch(function(){var a=document.createElement('a');a.href=u;a.download=pN;document.body.appendChild(a);a.click();document.body.removeChild(a);});}}
+function oP(){window.open(encodeURI(pU),'_blank','noopener');}
+function dP(){var u=encodeURI(pU);if(iF){sT('⬇ 正在下载简历..');window.location.href=u;}else{sT('📜 正在下载简历..');fetch(u).then(function(r){if(!r.ok)throw Error();return r.blob();}).then(function(b){var u=URL.createObjectURL(new Blob([b],{type:'application/pdf'}));var a=document.createElement('a');a.href=u;a.download=pN;document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u);},2000);sT('✓ 下载完成');}).catch(function(){sT('⬇ 跳转下载..');window.location.href=u;});}}
 document.getElementById('hero-resume-download').addEventListener('click',function(e){e.preventDefault();e.stopPropagation();dP();});
 document.getElementById('hero-resume-preview').addEventListener('click',function(e){e.preventDefault();e.stopPropagation();oP();});
 
