@@ -335,10 +335,10 @@ a{color:#000!important;text-decoration:underline}
     <div class="quick-info reveal">
         <div class="qi-item"><div class="qi-label">学校</div><div class="qi-value">内蒙古工业大学</div></div>
         <div class="qi-item"><div class="qi-label">专业</div><div class="qi-value">土木工程（本科）</div></div>
-        <div class="qi-item"><div class="qi-label">GPA</div><div class="qi-value">年级前10%</div></div>
+        <div class="qi-item"><div class="qi-label">GPA</div><div class="qi-value">年级前2%</div></div>
         </div>
     <div class="hero-contact-row">
-        <button class="hero-contact-btn hero-resume-download" id="hero-resume-btn" data-has-tooltip="true" data-tooltip-img="6.png" data-tooltip-label="个人简历缩略图">📋 个人简历</button>
+        <a class="hero-contact-btn hero-resume-download" id="hero-resume-btn" href="内蒙古工业大学-管家玉.pdf" data-has-tooltip="true" data-tooltip-img="6.png" data-tooltip-label="个人简历缩略图">📋 个人简历</a>
 
         <button class="hero-contact-btn" data-copy="15116820947">📱 15116820947</button>
         <button class="hero-contact-btn" data-copy="15116820947@139.com">✉️ 邮箱</button>
@@ -403,7 +403,7 @@ a{color:#000!important;text-decoration:underline}
     <div class="edu-card reveal-up">
         <p style="font-weight:700;font-size:.82rem;">内蒙古工业大学 · 土木工程（本科）</p>
         <p style="font-size:.67rem;color:var(--text3);">2025.09 - 2029.07</p>
-        <p style="font-size:.7rem;color:var(--text2);margin-top:3px;">综合学分绩点（GPA）位列年级前10%</p>
+        <p style="font-size:.7rem;color:var(--text2);margin-top:3px;">综合学分绩点（GPA）位列年级前2%</p>
         <p style="font-size:.65rem;color:var(--text3);">主修：高等数学 · 大学物理 · 理论力学 · 工科化学 · 工程制图</p>
     </div>
 </section>
@@ -470,7 +470,7 @@ a{color:#000!important;text-decoration:underline}
 (function() {
 var resume = {
     name:'管家玉',phone:'15116820947',wechat:'q1427420863p',email:'15116820947@139.com',github:'https://github.com/yu070159/',
-    education:{school:'内蒙古工业大学',major:'土木工程（本科）',period:'2025.09 - 2029.07',gpa:'综合学分绩点（GPA）位列年级前10%',courses:'高等数学 · 大学物理 · 理论力学 · 工科化学 · 工程制图'},
+    education:{school:'内蒙古工业大学',major:'土木工程（本科）',period:'2025.09 - 2029.07',gpa:'综合学分绩点（GPA）位列年级前2%',courses:'高等数学 · 大学物理 · 理论力学 · 工科化学 · 工程制图'},
     experiences:[
         {category:'work',title:'AI训练视频数据集项目',role:'供应链项目负责人',period:'2026.05 - 至今',points:['主导高标准流程制定：针对3D重构频率对画面场景复现的严格要求，主导空间坐标参数到采集团队标准化作业流程（SOP）的深度转化，实现团队数据采纳正确率的阶跃式提升，数据合格率达80%。','网格化团队组建与协同：通过垂直社群渠道，从0到1组建并网格化管理了50至100人规模的跨区域数据采集网络，制定严密的日常考核与联动机制，彻底攻克海量并发任务下的劳动力缺口。','供应链产能优化与交付：全面重构供应链管理与资源调配模式，推动整体数据采集供应链产能大幅提升达300%以上，提前10天完成核心阶段数据的闭环交付。']},
         {category:'intern',title:'美团AI coding',role:'校园大使',period:'2026.03 - 至今',points:['私域流量矩阵搭建：负责美团AI核心产品在校园市场的全渠道品牌推广，从0到1成功组建并精细化运营百人级校园微信技术交流群。','社群促活与裂变：负责社群日常技术答疑、功能宣发及官方活动通知，通过定制化激励机制确保社群月度活跃度维持在70%以上。','渠道转化与用户增长：积极推进线上线下校园裂变活动，成功引导超过80名目标学生群体下载并深度使用美团AI工具，实现新用户转化率提升20%。']},
@@ -516,7 +516,7 @@ var pU='内蒙古工业大学-管家玉.pdf',pN='内蒙古工业大学-管家玉
 function oP(){window.open(encodeURI(pU),'_blank','noopener');}
 function dP(){var u=encodeURI(pU);if(iF){sT('⬇ 正在下载简历..');window.location.href=u;}else{sT('📜 正在下载简历..');fetch(u).then(function(r){if(!r.ok)throw Error();return r.blob();}).then(function(b){var u=URL.createObjectURL(new Blob([b],{type:'application/pdf'}));var a=document.createElement('a');a.href=u;a.download=pN;document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u);},2000);sT('✓ 下载完成');}).catch(function(){sT('⬇ 跳转下载..');window.location.href=u;});}}
 
-document.getElementById('hero-resume-btn').addEventListener('click',function(e){e.preventDefault();var pdfDiv=document.getElementById('pdf-preview');var iframe=document.getElementById('pdf-iframe');iframe.src=encodeURI('内蒙古工业大学-管家玉.pdf');pdfDiv.classList.add('visible');document.body.style.overflow='hidden';});
+document.getElementById('hero-resume-btn').addEventListener('click',function(e){if(window.innerWidth>768){e.preventDefault();var pdfDiv=document.getElementById('pdf-preview');var iframe=document.getElementById('pdf-iframe');iframe.src=encodeURI('内蒙古工业大学-管家玉.pdf');pdfDiv.classList.add('visible');document.body.style.overflow='hidden';}else{sT('正在打开简历..');}});
 
 window.addEventListener('scroll',function(){window.scrollY>400?BT.classList.add('show'):BT.classList.remove('show');},{passive:true});
 BT.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
