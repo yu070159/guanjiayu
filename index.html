@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -137,10 +137,10 @@ body.dark #hero .hero-contact-btn.copied{background:#052e16!important;color:#4ad
 #skills .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}
 #skills .skill-category{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:11px;box-shadow:var(--shadow-sm)}
 #skills .skill-cat-title{font-weight:700;font-size:.78rem;margin-bottom:7px;color:var(--accent)}
-#skills .skill-item{display:flex;align-items:center;gap:5px;margin-bottom:5px;font-size:.67rem;color:var(--text2)}
-#skills .skill-bar-bg{flex:1;height:5px;background:var(--surface2);border-radius:3px;overflow:hidden}
-#skills .skill-bar-fill{height:100%;border-radius:3px;background:var(--gradient-hero);transition:width .5s ease}
-#skills .skill-label{font-size:.55rem;padding:2px 6px;border-radius:6px;background:var(--surface2);color:var(--text3);font-weight:500;white-space:nowrap}
+#skills .skill-item{font-size:.67rem;color:var(--text2)}
+{flex:1;height:5px;background:var(--surface2);border-radius:3px;overflow:hidden}
+{height:100%;border-radius:3px;background:var(--gradient-hero);transition:width .5s ease}
+{font-size:.55rem;padding:2px 6px;border-radius:6px;background:var(--surface2);color:var(--text3);font-weight:500;white-space:nowrap}
 
 .exp-card,.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:13px;margin-bottom:8px;box-shadow:var(--shadow-sm);transition:all var(--transition)}
 .exp-card:hover,.proj-card:hover{transform:translateY(-1px);box-shadow:var(--shadow);border-color:var(--accent-glow)}
@@ -292,7 +292,7 @@ a{color:#000!important;text-decoration:underline}
 </style>
 </head>
 <body>
-<div id="intro-overlay" aria-hidden="false">
+<div id="intro-overlay" aria-hidden="false" onclick="var o=this;o.classList.add('fade-out');setTimeout(function(){o.style.display='none';o.setAttribute('aria-hidden','true');},400);">
     <div class="intro-content">
         <div class="intro-title" id="intro-title-text"></div>
     </div>
@@ -322,20 +322,20 @@ a{color:#000!important;text-decoration:underline}
     <img src="tx.png" alt="管家玉头像" class="hero-avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';" style="display:block;">
     <div style="display:none;width:76px;height:76px;border-radius:50%;background:var(--gradient-hero);align-items:center;justify-content:center;font-size:1.6rem;color:#fff;margin:0 auto 10px;flex-shrink:0;">👤</div>
     <h1 class="hero-name">管家玉</h1>
-    <span class="hero-target">求职意向：AI开发工程师 / 全栈开发（实习）</span>
-    <p class="hero-tagline">AI开发工程师 · 全栈开发者 · 多媒体创作者<br>以第一性原理驱动，融合AI与工程实践，持续交付高价值成果</p>
+    
+    <p class="hero-tagline">AI开发工程师 · 全栈开发者<br>以第一性原理驱动，融合AI与工程实践</p>
     <div class="hero-badges">
-        <span class="hero-badge">AI Agent开发</span>
-        <span class="hero-badge">全栈架构</span>
-        <span class="hero-badge">Supabase RLS</span>
-        <span class="hero-badge">Playwright E2E</span>
-        <span class="hero-badge">视频创作</span>
+        <span class="hero-badge">Vibe Coding</span>
+        <span class="hero-badge">Claude Code</span>
+        <span class="hero-badge">Codex</span>
+        <span class="hero-badge">Gemini Pro</span>
         <span class="hero-badge">Prompt工程</span>
+        <span class="hero-badge">AI Agent开发</span>
     </div>
     <div class="quick-info reveal">
-        <div class="qi-item"><div class="qi-label">学校</div><div class="qi-value">内蒙古工业大学</div></div>
+        <div class="qi-item"><div class="qi-label">学校</div><div class="qi-value"><a href="https://www.imut.edu.cn/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">内蒙古工业大学</a></div></div>
         <div class="qi-item"><div class="qi-label">专业</div><div class="qi-value">土木工程（本科）</div></div>
-        <div class="qi-item"><div class="qi-label">GPA</div><div class="qi-value">年级前2%</div></div>
+        <div class="qi-item"><div class="qi-label">GPA</div><div class="qi-value">年级前100</div></div>
         </div>
     <div class="hero-contact-row">
         <a class="hero-contact-btn hero-resume-download" id="hero-resume-btn" href="内蒙古工业大学-管家玉.pdf" data-has-tooltip="true" data-tooltip-img="6.png" data-tooltip-label="个人简历缩略图">📋 个人简历</a>
@@ -343,18 +343,23 @@ a{color:#000!important;text-decoration:underline}
         <button class="hero-contact-btn" data-copy="15116820947">📱 15116820947</button>
         <button class="hero-contact-btn" data-copy="15116820947@139.com">✉️ 邮箱</button>
         <button class="hero-contact-btn" data-copy="q1427420863p" data-has-tooltip="true" data-tooltip-img="wx.png" data-tooltip-label="微信主页">💬 微信</button>
+        <a class="hero-contact-btn" href="https://www.imut.edu.cn/" target="_blank" rel="noopener">🎓 学校官网</a>
+<a class="hero-contact-btn" href="https://yu070159.github.io/guanjiayu/" target="_blank" rel="noopener">🌐 个人网站</a>
         <a class="hero-contact-btn" href="https://github.com/yu070159/" target="_blank" rel="noopener">🐙 GitHub</a>
     </div>
 </section>
-<section class="section-block visible" id="highlights" data-section="highlights">
-    <div class="section-header"><span>📊 核心成果</span><span class="sh-line"></span></div>
-    <div class="highlight-cards reveal-stagger">
-        <div class="highlight-card reveal-up"><div class="highlight-num">300%+</div><div class="highlight-label">供应链产能提升</div></div>
-        <div class="highlight-card reveal-up"><div class="highlight-num">80%</div><div class="highlight-label">数据合格率</div></div>
-        <div class="highlight-card reveal-up"><div class="highlight-num">99.8%</div><div class="highlight-label">系统边界可用性</div></div>
-        <div class="highlight-card reveal-up"><div class="highlight-num">Top 22</div><div class="highlight-label">全国机器人大赛</div></div>
+
+<section class="section-block visible" id="education" data-section="education">
+    <div class="section-header"><span>🎓 教育背景</span><span class="sh-line"></span></div>
+    <div class="edu-card reveal-up">
+        <p style="font-weight:700;font-size:.82rem;"><a href="https://www.imut.edu.cn/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">内蒙古工业大学</a> · 土木工程（本科）</p>
+        <p style="font-size:.67rem;color:var(--text3);">2025.09 - 2029.07</p>
+        <p style="font-size:.7rem;color:var(--text2);margin-top:3px;">综合学分绩点（GPA）位列年级前100</p>
+        
     </div>
 </section>
+
+
 
 <section class="section-block visible" id="skills" data-section="skills">
     <div class="section-header"><span>🛠️ 技能矩阵</span><span class="sh-line"></span></div>
@@ -362,30 +367,16 @@ a{color:#000!important;text-decoration:underline}
 </section>
 
 <section class="section-block visible" id="experience" data-section="experience">
-    <div class="section-header"><span>💼 工作/实习经历</span><span class="sh-line"></span></div>
+    <div class="section-header"><span>💼 经历</span><span class="sh-line"></span></div>
     <div class="tab-nav" role="tablist">
-        <button class="tab-btn" role="tab" aria-selected="true" aria-controls="exp-panel-0" id="exp-tab-0">工作经历</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="exp-panel-1" id="exp-tab-1">实习经历</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="exp-panel-2" id="exp-tab-2">校园经历</button>
+        <button class="tab-btn" role="tab" aria-selected="true" aria-controls="exp-panel-0" id="exp-tab-0">校外经历</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="exp-panel-1" id="exp-tab-1">在校经历</button>
     </div>
     <div class="tab-panel" role="tabpanel" aria-hidden="false" id="exp-panel-0"></div>
     <div class="tab-panel" role="tabpanel" aria-hidden="true" id="exp-panel-1"></div>
-    <div class="tab-panel" role="tabpanel" aria-hidden="true" id="exp-panel-2"></div>
 </section>
 
-<section class="section-block visible" id="projects" data-section="projects">
-    <div class="section-header"><span>🚀 项目经历</span><span class="sh-line"></span></div>
-    <div class="tab-nav" role="tablist">
-        <button class="tab-btn" role="tab" aria-selected="true" aria-controls="proj-panel-0" id="proj-tab-0">心灵树洞</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="proj-panel-1" id="proj-tab-1">机器人大赛</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="proj-panel-2" id="proj-tab-2">创新创业</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="proj-panel-3" id="proj-tab-3">微电影</button>
-    </div>
-    <div class="tab-panel" role="tabpanel" aria-hidden="false" id="proj-panel-0"></div>
-    <div class="tab-panel" role="tabpanel" aria-hidden="true" id="proj-panel-1"></div>
-    <div class="tab-panel" role="tabpanel" aria-hidden="true" id="proj-panel-2"></div>
-    <div class="tab-panel" role="tabpanel" aria-hidden="true" id="proj-panel-3"></div>
-</section>
+
 
 <section class="section-block visible" id="certificates" data-section="certificates">
     <div class="section-header"><span>🏅 获奖与证书</span><span class="sh-line"></span></div>
@@ -398,28 +389,19 @@ a{color:#000!important;text-decoration:underline}
     </div>
 </section>
 
-<section class="section-block visible" id="education" data-section="education">
-    <div class="section-header"><span>🎓 教育背景</span><span class="sh-line"></span></div>
-    <div class="edu-card reveal-up">
-        <p style="font-weight:700;font-size:.82rem;">内蒙古工业大学 · 土木工程（本科）</p>
-        <p style="font-size:.67rem;color:var(--text3);">2025.09 - 2029.07</p>
-        <p style="font-size:.7rem;color:var(--text2);margin-top:3px;">综合学分绩点（GPA）位列年级前2%</p>
-        <p style="font-size:.65rem;color:var(--text3);">主修：高等数学 · 大学物理 · 理论力学 · 工科化学 · 工程制图</p>
-    </div>
-</section>
-<div class="section-header section-block" data-section="personal"><span>🧩 个人项目</span><span class="sh-line"></span></div>
+<div class="section-header section-block" data-section="projects"><span>🧩 个人项目</span><span class="sh-line"></span></div>
 
-<section class="section-block visible interactive-card reveal-up" data-section="personal" style="margin-bottom:10px;">
+<section class="section-block visible interactive-card reveal-up" data-section="projects" style="margin-bottom:10px;">
     <div class="card-header">
         <div class="card-icon">🌳</div>
         <div class="card-title">心灵树洞 (Soul Tree Hollow)<span class="personal-badge" style="font-size:.55rem;background:var(--accent);color:#fff;padding:1px 7px;border-radius:6px;font-weight:500;margin-left:6px;vertical-align:middle;">个人项目</span></div>
         
     </div>
-    <p class="card-desc">一个为在学业压力、人际内耗与情绪低谷中彷徨的年轻人打造的匿名倾诉与心理互助社区。融合AI陪伴、心理学经典阅读与情绪管理工具，提供安全、温暖、无评判的栖息地。支持匿名发帖、MBTI与PHQ-9自测、弗洛伊德至荣格经典在线阅读及AI树灵对话。由非计算机专业背景的心理学爱好者借助AI独立完成，采用原生JS与Supabase全栈架构，部署于Vercel。</p>
+    <p class="card-desc">作为非计算机专业学生，发现身边同龄人普遍缺乏安全的情绪倾诉出口，决定借助AI从零搭建一个匿名心理互助社区。在零编程基础、有限预算下，独立完成从产品设计、技术选型、开发、AI集成到部署上线的全链路交付。通过Claude Code等AI工具辅助，完成原生JS全栈开发（Supabase + Vercel + DeepSeek API），实现AI陪伴对话、用户系统、内容推荐等核心功能。网站上线并持续迭代，验证了非技术背景下借助AI快速将产品构想落地为可用产品的能力。</p>
     <a class="card-action-btn" href="https://xinling-shudong.vercel.app/" target="_blank" rel="noopener" data-has-tooltip="true" data-tooltip-img="5.png" data-tooltip-label="心灵树洞截图">访问心灵树洞</a><span class="vpn-warning" style="margin-left:6px;">需VPN</span>
 </section>
 
-<section class="section-block visible interactive-card reveal-up" data-section="personal" style="margin-bottom:10px;">
+<section class="section-block visible interactive-card reveal-up" data-section="projects" style="margin-bottom:10px;">
     <div class="card-header">
         <div class="card-icon">🚀</div>
         <div class="card-title">雷霆战机 (Thunder Fighter)<span class="personal-badge" style="font-size:.55rem;background:var(--accent);color:#fff;padding:1px 7px;border-radius:6px;font-weight:500;margin-left:6px;vertical-align:middle;">个人项目</span></div>
@@ -431,13 +413,13 @@ a{color:#000!important;text-decoration:underline}
     </div>
 </section>
 
-<div class="section-header section-block" data-section="showcase-images"><span>📷 照片展示</span><span class="sh-line"></span></div>
-<section class="section-block visible image-showcase-row" data-section="showcase-images">
+<div class="section-header section-block" data-section="personal"><span>📷 照片展示</span><span class="sh-line"></span></div>
+<section class="section-block visible image-showcase-row" data-section="personal">
     <div class="showcase-img-wrapper reveal-up"><img src="2.png" alt="工作经历"></div>
     <div class="showcase-img-wrapper reveal-up"><img src="4.png" alt="校园风光"></div>
 </section>
 
-<footer id="site-footer" class="reveal" data-section="footer">
+<footer id="site-footer" class="reveal" data-section="personal">
     <p>© 2026 管家玉 · 更新于2026年6月 · 用心打造每一行代码</p>
 </footer>
 </main>
@@ -466,102 +448,74 @@ a{color:#000!important;text-decoration:underline}
     </div>
     <iframe id="game-float-iframe" title="雷霆战机" allow="autoplay; fullscreen"></iframe>
 </div>
-<script>
-(function() {
+<script>(function(){
 var resume = {
-    name:'管家玉',phone:'15116820947',wechat:'q1427420863p',email:'15116820947@139.com',github:'https://github.com/yu070159/',
-    education:{school:'内蒙古工业大学',major:'土木工程（本科）',period:'2025.09 - 2029.07',gpa:'综合学分绩点（GPA）位列年级前2%',courses:'高等数学 · 大学物理 · 理论力学 · 工科化学 · 工程制图'},
-    experiences:[
-        {category:'work',title:'AI训练视频数据集项目',role:'供应链项目负责人',period:'2026.05 - 至今',points:['主导高标准流程制定：针对3D重构频率对画面场景复现的严格要求，主导空间坐标参数到采集团队标准化作业流程（SOP）的深度转化，实现团队数据采纳正确率的阶跃式提升，数据合格率达80%。','网格化团队组建与协同：通过垂直社群渠道，从0到1组建并网格化管理了50至100人规模的跨区域数据采集网络，制定严密的日常考核与联动机制，彻底攻克海量并发任务下的劳动力缺口。','供应链产能优化与交付：全面重构供应链管理与资源调配模式，推动整体数据采集供应链产能大幅提升达300%以上，提前10天完成核心阶段数据的闭环交付。']},
-        {category:'intern',title:'美团AI coding',role:'校园大使',period:'2026.03 - 至今',points:['私域流量矩阵搭建：负责美团AI核心产品在校园市场的全渠道品牌推广，从0到1成功组建并精细化运营百人级校园微信技术交流群。','社群促活与裂变：负责社群日常技术答疑、功能宣发及官方活动通知，通过定制化激励机制确保社群月度活跃度维持在70%以上。','渠道转化与用户增长：积极推进线上线下校园裂变活动，成功引导超过80名目标学生群体下载并深度使用美团AI工具，实现新用户转化率提升20%。']},
-        {category:'campus',title:'校社团联合会发展运营部',role:'社团成员',period:'2025.09 - 至今',points:['大型活动全流程保障：深度参与多项千人级大型校园活动的现场组织与后勤保障工作，负责物料统筹、设备调试及多部门突发事务的紧急协调，确保现场零失误运行。','流程资产沉淀与提效：协助部长将复杂的协同流程、人员排班及后勤执行经验全面数字化，沉淀并编写出一套可复制的标准化作业流程（SOP），使后续同类活动筹备周期缩短30%。']}
-    ],
-    projects:[
-        {name:'心灵树洞全栈Web应用',role:'独立全栈开发者',period:'2026.05',tech:'HTML5/CSS3/ES6+ / Supabase / Vercel / DeepSeek API',link:'',points:['极速原型交付：100%融合Trae与Claude Code智能工具链，采用轻量化原生架构，15天内独立闭环交付16个高保真响应式交互页面。','全栈架构与AI深度集成：独立设计并部署Supabase数据库网关，构建14张基础数据表，接入DeepSeek API实现毫秒级动态响应用户情感互动。','工程安全与质量保障：配置行级安全策略（RLS）实现匿名用户隐私数据物理隔离；利用Playwright编写213个E2E自动化测试用例，系统边界可用性达99.8%。']},
-        {name:'全国先进机器人及仿真技术大赛',role:'算法与控制核心负责人',period:'2026.04 - 2026.05',tech:'Python 3.7 / Prompt Engineering / 仿真平台',link:'',points:['控制策略开发与逻辑调优：运用前沿AI提示词工程辅助优化控制算法，独立编写机器鱼各关节运动、三维空间位置及动态姿态控制的底层核心代码。','极端边界死卡与精调：针对大赛死卡18秒极严苛通关时限，通过多轮仿真测试参数微调，精细化控制动态推进力及胸鳍沿Y轴旋转角度。','复杂三维约束突破：成功破解机器鱼通关复杂三维水池空间约束与最优路径规划难题，斩获全国二等奖（国赛Top 22）。']},
-        {name:'大学生创新创业大赛',role:'项目负责人',period:'2026.01 - 至今',tech:'Elicit / 商业计划书 / 竞品分析',link:'',points:['AI自动化文献提炼：高效利用Elicit自动化文献分析工具，针对特定行业痛点检索并深度提炼10篇核心文献，快速构建完备的项目理论体系与竞品分析模型。','商业计划书独立撰写：独立主导撰写15页高质量商业计划书，覆盖市场痛点分析、产品核心定义、跨学科团队组建及中长期财务预测四大战略模块，获校内评审专家高度评价。']},
-        {name:'校园多媒体微电影实践项目',role:'组织策划者',period:'2025.12',tech:'Gemini / Adobe Premiere Pro / Adobe Audition',link:'',points:['AI大模型协同剧本创作：借助Gemini大模型进行灵感碰撞与结构化提炼，高效创作逻辑严密的多媒体脚本与创意分镜大纲，前期剧本筹备时间缩短50%。','专业级后期音视频处理：熟练运用Premiere Pro和Audition进行精细化剪辑、色彩科学调色、多轨音频降噪与视觉特效美化，保障高质量视觉呈现。']}
-    ],
-    skills:[
-        {category:'AI开发工具链与前沿大模型',items:[{name:'Claude Code / TRAE',level:92},{name:'DeepSeek / Gemini Pro API',level:88},{name:'智能体(Agent)构建',level:85},{name:'提示词工程(Prompt)',level:90}]},
-        {category:'全栈开发与测试体系',items:[{name:'HTML5 / CSS3 / ES6+',level:93},{name:'Supabase / RLS策略',level:85},{name:'Playwright E2E测试',level:82},{name:'Git / GitHub 版本控制',level:88}]},
-        {category:'多媒体音视频创作',items:[{name:'Adobe Premiere Pro',level:87},{name:'Adobe Audition',level:80},{name:'CapCut（剪映）',level:90}]},
-        {category:'方法论与办公专项',items:[{name:'Elicit文献提炼',level:85},{name:'SOP标准化流程',level:88},{name:'Office / Markdown',level:92}]}
-    ]
+  name:'管家玉',phone:'15116820947',wechat:'q1427420863p',email:'15116820947@139.com',
+  github:'https://github.com/yu070159/',
+  website:'https://yu070159.github.io/guanjiayu/',
+  education:{school:'内蒙古工业大学',major:'土木工程（本科）',period:'2025.09-2029.07',gpa:'综合学分绩点（GPA）位列年级前100'},
+  experiences:[
+    {cat:'offcampus',title:'心灵树洞全栈Web应用',role:'独立开发者',period:'2026.05-至今',points:['作为非计算机专业学生，发现身边同龄人普遍缺乏安全的情绪倾诉出口，决定借助AI从零搭建一个匿名心理互助社区。在零编程基础、有限预算下，独立完成从产品设计、技术选型、开发、AI集成到部署上线的全链路交付。','通过Claude Code等AI工具辅助，完成原生JS全栈开发（Supabase + Vercel + DeepSeek API），实现AI陪伴对话、用户系统、内容推荐等核心功能；基于用户心理调研将视觉从深色重构为浅色暖调；筛选18本公共领域心理学经典实现站内阅读，兼顾版权合规与成本控制。网站上线并持续迭代，验证了非技术背景下借助AI快速将产品构想落地为可用产品的能力。']},
+    {cat:'offcampus',title:'国际先进机器人及仿真技术大赛',role:'核心算法开发者',period:'2026.04-2026.05',points:['国赛要求机器鱼在三维水池中，于≤30秒的极严苛时限内完成避障通关。独立负责机器鱼底层运动控制与路径规划核心算法的开发。运用Vibe Coding通过自然语言与AI交互直接优化Python底层代码，快速完成控制算法的迭代调优；独立编写机器鱼各关节运动、三维空间位置及动态姿态控制的底层核心代码。','成功破解复杂三维空间约束与最优路径规划难题，从85所高校330支队伍中脱颖而出，斩获全国二等奖。']},
+    {cat:'offcampus',title:'AI训练视频数据集',role:'供应数据链项目负责人',period:'2026.05-至今',points:['项目需采集大量3D重构视频数据，对画面场景复现精度要求高，但初期团队提交的数据采纳率偏低。负责将空间坐标等技术参数转化为采集团队能听懂的标准化操作指引，并组织线上兼职团队完成数据采集任务。','借助AI工具辅助制定数据采集SOP与考核机制，通过线上渠道从零组建并管理50-200人规模的跨区域采集团队，用在线文档和群组协作替代传统的供应链管理。','数据合格率提升至80%，整体采集效率大幅提高，核心阶段数据提前交付。']},
+    {cat:'oncampus',title:'美团AI coding',role:'校园大使',period:'2026.03-至今',points:['负责美团AI在校园内的推广，从零组建并维护百人规模的微信技术交流群。日常在群内进行技术答疑、功能宣发和活动通知，通过定期分享更新和福利维持社群活跃度。','成功引导超过50名同学开始使用美团AI工具，实现了较高比例的用户转化。']},
+    {cat:'oncampus',title:'社联发展运营部',role:'社团成员',period:'2025.09-至今',points:['参与多场千人级校园活动的后勤保障工作，熟悉大型活动从筹备到执行的完整流程。','将活动中的协同经验与后勤执行要点整理成文档，供后续活动参考使用，提升了同类活动的组织效率。']},
+    {cat:'oncampus',title:'大学生创新创业大赛',role:'项目负责人',period:'2026.01-至今',points:['主持"废旧风机叶片回收GFRP方筋与混凝土粘结性能"课题研究，借助AI工具辅助文献调研与市场分析，完成15页商业计划书，内容覆盖技术路线、团队组建与财务预测。']},
+    {cat:'oncampus',title:'微电影实践',role:'组织策划者',period:'2025.12',points:['熟练运用Adobe Premiere Pro和Adobe Audition进行视频的精细化剪辑、色彩科学调色、多轨音频降噪与视觉特效美化，全方位保障最终交付素材的高质量视觉呈现。']},
+    {cat:'oncampus',title:'班级心理委员',role:'心理委员',period:'2025.09-至今',points:['定期组织心理健康主题活动，关注同学情绪状态并提供朋辈倾听，搭建班级与校心理咨询中心之间的信息桥梁。']}
+  ],
+  skills:[
+    {cat:'AI开发工具链',items:['Vercel','Claude Code','vibe coding','Codex','Gemini Pro','GitHub']},
+    {cat:'AI证书',items:['微调工程师','智能体工程师','Prompt工程师','达摩院人工智能训练师']},
+    {cat:'技能',items:['剪映','Ps','Pr','Au','办公软件三件套']}
+  ]
 };
-
-var O=document.getElementById('intro-overlay'),IT=document.getElementById('intro-title-text'),MC=document.getElementById('main-content'),TN=document.getElementById('top-nav'),TT=document.getElementById('global-tooltip'),TI=document.getElementById('tooltip-img'),TL=document.getElementById('tooltip-label'),T=document.getElementById('toast'),BT=document.getElementById('back-to-top'),TH=document.getElementById('theme-toggle'),PB=document.getElementById('print-btn'),SB=MC.querySelectorAll('.section-block'),NL=TN.querySelectorAll('.nav-link[data-section]'),NB=TN.querySelector('.nav-brand');
-var th=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+var O=document.getElementById('intro-overlay'),IT=document.getElementById('intro-title-text');
+var MC=document.getElementById('main-content'),TN=document.getElementById('top-nav');
+var TT=document.getElementById('global-tooltip'),TI=document.getElementById('tooltip-img');
+var TL=document.getElementById('tooltip-label'),T=document.getElementById('toast');
+var BT=document.getElementById('back-to-top'),TH=document.getElementById('theme-toggle');
+var PB=document.getElementById('print-btn'),SB=MC.querySelectorAll('.section-block');
+var NL=TN.querySelectorAll('.nav-link[data-section]'),NB=TN.querySelector('.nav-brand');
+var th='light';
+try{th=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch(e){}
 if(th==='dark')document.body.classList.add('dark');
-TH.addEventListener('click',function(){document.body.classList.toggle('dark');localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light');});
-var tT;
-function sT(m){clearTimeout(tT);T.textContent=m;T.classList.add('show');tT=setTimeout(function(){T.classList.remove('show');},1800);}
-function cT(t){try{navigator.clipboard.writeText(t);sT('✓ 已复制：'+t);}catch(e){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);sT('✓ 已复制：'+t);}}
-document.addEventListener('click',function(e){var b=e.target.closest('[data-copy]');if(b){e.preventDefault();cT(b.getAttribute('data-copy'));b.classList.add('copied');setTimeout(function(){b.classList.remove('copied');},1200);}});
-var tA=false,tE=null;
-function sTT(el,img,lbl){tA=true;tE=el;TI.src=img;TI.onerror=function(){TI.style.display='none';TL.textContent=lbl;};TI.onload=function(){TI.style.display='block';};TI.style.display='block';TL.textContent=lbl||'';TT.classList.add('visible');pTT(el);}
-function hTT(){tA=false;tE=null;TT.classList.remove('visible');}
-function pTT(el){var r=el.getBoundingClientRect(),w=TT.offsetWidth||160,h=TT.offsetHeight||100,l=r.left+r.width/2,t=r.bottom+10;if(l-w/2<8)l=w/2+8;if(l+w/2>window.innerWidth-8)l=window.innerWidth-w/2-8;if(t+h>window.innerHeight-20)t=r.top-h-10;TT.style.left=l+'px';TT.style.top=t+'px';TT.style.transform='translate(-50%,0)';}
-document.addEventListener('mouseover',function(e){var el=e.target.closest('[data-has-tooltip="true"]');if(el)sTT(el,el.getAttribute('data-tooltip-img')||'',el.getAttribute('data-tooltip-label')||'');else if(!e.target.closest('#global-tooltip')&&!e.target.closest('[data-has-tooltip="true"]'))hTT();});
-document.addEventListener('mousemove',function(e){if(tA&&tE&&window.innerWidth>768){var l=e.clientX,t=e.clientY+15,w=TT.offsetWidth||160,h=TT.offsetHeight||100;if(l-w/2<8)l=w/2+8;if(l+w/2>window.innerWidth-8)l=window.innerWidth-w/2-8;if(t+h>window.innerHeight-20)t=e.clientY-h-15;TT.style.left=l+'px';TT.style.top=t+'px';TT.style.transform='translate(-50%,0)';}});
-document.addEventListener('mouseout',function(e){if(e.target.closest('[data-has-tooltip="true"]')&&!e.relatedTarget)hTT();});
-TT.addEventListener('mouseleave',hTT);
-function sA(){SB.forEach(function(b){b.classList.add('visible');});MC.classList.remove('hidden-sections');uN('all');}
-function sS(s){MC.classList.add('hidden-sections');SB.forEach(function(b){b.getAttribute('data-section')===s?b.classList.add('visible'):b.classList.remove('visible');});uN(s);var t=MC.querySelector('[data-section="'+s+'"]');if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}
-function uN(s){NL.forEach(function(l){l.classList.remove('active');if(l.getAttribute('data-section')===s)l.classList.add('active');});}
-NL.forEach(function(l){l.addEventListener('click',function(){var s=this.getAttribute('data-section');s==='all'?sA():sS(s);});});
-NB.addEventListener('click',sA);sA();
-
-var pU='内蒙古工业大学-管家玉.pdf',pN='内蒙古工业大学-管家玉.pdf',iF=window.location.protocol==='file:';
-function oP(){window.open(encodeURI(pU),'_blank','noopener');}
-function dP(){var u=encodeURI(pU);if(iF){sT('⬇ 正在下载简历..');window.location.href=u;}else{sT('📜 正在下载简历..');fetch(u).then(function(r){if(!r.ok)throw Error();return r.blob();}).then(function(b){var u=URL.createObjectURL(new Blob([b],{type:'application/pdf'}));var a=document.createElement('a');a.href=u;a.download=pN;document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u);},2000);sT('✓ 下载完成');}).catch(function(){sT('⬇ 跳转下载..');window.location.href=u;});}}
-
-document.getElementById('hero-resume-btn').addEventListener('click',function(e){if(window.innerWidth>768){e.preventDefault();var pdfDiv=document.getElementById('pdf-preview');var iframe=document.getElementById('pdf-iframe');iframe.src=encodeURI('内蒙古工业大学-管家玉.pdf');pdfDiv.classList.add('visible');document.body.style.overflow='hidden';}else{sT('正在打开简历..');}});
-
-window.addEventListener('scroll',function(){window.scrollY>400?BT.classList.add('show'):BT.classList.remove('show');},{passive:true});
-BT.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
-PB.addEventListener('click',function(){sA();setTimeout(function(){window.print();},150);});
-
-var eP=[document.getElementById('exp-panel-0'),document.getElementById('exp-panel-1'),document.getElementById('exp-panel-2')];
-var eT=[document.getElementById('exp-tab-0'),document.getElementById('exp-tab-1'),document.getElementById('exp-tab-2')];
-['work','intern','campus'].forEach(function(c,i){var items=resume.experiences.filter(function(e){return e.category===c;});eP[i].innerHTML=items.length?items.map(function(e){return '<div class="exp-card reveal-up"><div class="exp-header"><span class="exp-title">'+e.title+'</span><span class="exp-meta"> / '+e.role+' / '+e.period+'</span></div><ul>'+e.points.map(function(p){return '<li>'+p+'</li>';}).join('')+'</ul></div>';}).join(''):'<p style="color:var(--text3);font-size:.7rem;padding:8px;">暂无相关经历</p>';});
-eT.forEach(function(t,i){t.addEventListener('click',function(){eT.forEach(function(x){x.setAttribute('aria-selected','false');});eP.forEach(function(x){x.setAttribute('aria-hidden','true');});t.setAttribute('aria-selected','true');eP[i].setAttribute('aria-hidden','false');});});
-
-var pP=[document.getElementById('proj-panel-0'),document.getElementById('proj-panel-1'),document.getElementById('proj-panel-2'),document.getElementById('proj-panel-3')];
-var pT=[document.getElementById('proj-tab-0'),document.getElementById('proj-tab-1'),document.getElementById('proj-tab-2'),document.getElementById('proj-tab-3')];
-resume.projects.forEach(function(p,i){if(!p){pP[i].innerHTML='<p style="color:var(--text3);font-size:.7rem;padding:8px;">暂无相关项目</p>';return;}pP[i].innerHTML='<div class="proj-card reveal-up"><div class="proj-header"><span class="proj-title">'+p.name+'</span><span class="proj-meta"> / '+p.role+' / '+p.period+'</span></div><p style="font-size:.65rem;color:var(--text3);margin-bottom:3px;">🔧 '+p.tech+'</p><ul>'+p.points.map(function(pt){return '<li>'+pt+'</li>';}).join('')+'</ul><div style="display:flex;align-items:center;gap:6px;">'+(p.link?'<a class="proj-link" href="'+p.link+'" target="_blank" rel="noopener">🔗 访问项目 →</a>':'')+(i===0?'<span class="vpn-warning" style="margin-left:6px;">需VPN</span>':'')+'</div></div>';});
-pT.forEach(function(t,i){t.addEventListener('click',function(){pT.forEach(function(x){x.setAttribute('aria-selected','false');});pP.forEach(function(x){x.setAttribute('aria-hidden','true');});t.setAttribute('aria-selected','true');pP[i].setAttribute('aria-hidden','false');});});
-
-document.getElementById('skill-grid').innerHTML=resume.skills.map(function(c){return '<div class="skill-category reveal-up"><div class="skill-cat-title">'+c.category+'</div>'+c.items.map(function(it){return '<div class="skill-item"><span style="flex:0 0 82px;font-size:.65rem;">'+it.name+'</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:0;" data-width="'+it.level+'%"></div></div><span class="skill-label">'+it.level+'%</span></div>';}).join('')+'</div>';}).join('');
-
-(function(){var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;entry.target.classList.add('revealed');entry.target.querySelectorAll('.skill-bar-fill[data-width]').forEach(function(bar,i){setTimeout(function(){bar.style.width=bar.getAttribute('data-width');},i*80);});obs.unobserve(entry.target);});},{threshold:0.1});document.querySelectorAll('.reveal,.reveal-up,.reveal-scale').forEach(function(el){obs.observe(el);});var hs=document.getElementById('highlights');if(hs){var targets=Array.from(hs.querySelectorAll('.highlight-num')).map(function(el){var t=el.textContent.trim(),m=t.match(/([\d.]+)/);return{el:el,suffix:t.replace(/[\d.]+/,''),prefix:(t.match(/^[^\d]*/)||[''])[0],target:m?parseFloat(m[1]):0,hasDecimal:m?m[1].includes('.'):false,animated:false};});var co=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;targets.forEach(function(t,i){if(t.animated)return;t.animated=true;var dur=1200,st=performance.now(),delay=i*100;function upd(now){var elapsed=now-st-delay;if(elapsed<0){t.el.textContent=t.prefix+'0'+t.suffix;requestAnimationFrame(upd);return;}var p=Math.min(elapsed/dur,1),eased=1-Math.pow(1-p,3),val=t.target*eased;t.el.textContent=t.prefix+(t.hasDecimal?val.toFixed(1):t.target>=100?Math.floor(val):Math.round(val))+t.suffix;if(p<1)requestAnimationFrame(upd);else t.el.textContent=t.prefix+t.target+t.suffix;}requestAnimationFrame(upd);});co.unobserve(entry.target);});},{threshold:0.3});co.observe(hs);}})();
-
-if(localStorage.getItem('visited')==='true'){O.style.display='none';O.setAttribute('aria-hidden','true');}else{localStorage.setItem('visited','true');var skipped=false;function skip(){if(skipped)return;skipped=true;O.classList.add('fade-out');setTimeout(function(){O.style.display='none';O.setAttribute('aria-hidden','true');},400);}IT.innerHTML='';var cs=document.createElement('span');cs.className='cursor-blink';IT.appendChild(cs);var txt='^v^ 欢迎访问我的个人网站 ^v^';var ci=0;var ti=setInterval(function(){if(ci<txt.length){cs.before(document.createTextNode(txt[ci]));ci++;}else{clearInterval(ti);setTimeout(function(){if(!skipped)skip();},1200);}},45);O.addEventListener('click',skip,{once:true});}
-window.addEventListener('resize',function(){if(tA&&tE)pTT(tE);});
-
-var LB=document.getElementById('image-lightbox'),LI=document.getElementById('lightbox-img'),LC=document.getElementById('lightbox-caption'),LX=document.getElementById('lightbox-close');
-function sLB(i){LI.src=i.src;LC.textContent=i.alt||'';LB.classList.add('visible');document.body.style.overflow='hidden';}
-function hLB(){LB.classList.remove('visible');document.body.style.overflow='';}
-LB.addEventListener('click',hLB);LX.addEventListener('click',function(e){e.stopPropagation();hLB();});LI.addEventListener('click',function(e){e.stopPropagation();});
-document.addEventListener('dblclick',function(e){var i=e.target.closest('img');if(i&&!e.target.closest('#global-tooltip')&&!e.target.closest('#image-lightbox'))sLB(i);});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'&&LB.classList.contains('visible'))hLB();});
-
-var GF=document.getElementById('game-float'),GI=document.getElementById('game-float-iframe'),GH=document.getElementById('game-float-header'),GT=document.getElementById('game-thumbnail'),GC=document.getElementById('game-float-close'),GFf=document.getElementById('game-float-fullscreen'),gU='飞机.html',gL=false;
-function oGF(){if(!gL){GI.src=gU;gL=true;}var w=Math.min(400,window.innerWidth*.92),h=Math.min(500,window.innerHeight*.8);GF.style.width=w+'px';GF.style.height=h+'px';GF.style.left=((window.innerWidth-w)/2)+'px';GF.style.top=((window.innerHeight-h)/2)+'px';GF.classList.add('active');GF.setAttribute('aria-hidden','false');}
-function cGF(){GF.classList.remove('active');GF.setAttribute('aria-hidden','true');}
-if(GT)GT.addEventListener('click',oGF);if(GC)GC.addEventListener('click',cGF);if(GFf)GFf.addEventListener('click',function(){if(GI.requestFullscreen)GI.requestFullscreen();});
-if(GH&&GF){var dr=false,sx,sy,sl,st;GH.addEventListener('mousedown',function(e){if(e.target.closest('.game-float-btn'))return;dr=true;sx=e.clientX;sy=e.clientY;sl=GF.offsetLeft;st=GF.offsetTop;GF.style.transition='none';e.preventDefault();});
-document.addEventListener('mousemove',function(e){if(!dr)return;GF.style.left=Math.max(0,Math.min(sl+e.clientX-sx,window.innerWidth-GF.offsetWidth))+'px';GF.style.top=Math.max(0,Math.min(st+e.clientY-sy,window.innerHeight-48))+'px';});
-document.addEventListener('mouseup',function(){if(dr){dr=false;GF.style.transition='opacity .25s ease, transform .25s ease';}});
-GH.addEventListener('touchstart',function(e){if(e.target.closest('.game-float-btn'))return;dr=true;sx=e.touches[0].clientX;sy=e.touches[0].clientY;sl=GF.offsetLeft;st=GF.offsetTop;GF.style.transition='none';},{passive:false});
-document.addEventListener('touchmove',function(e){if(!dr)return;var dx=e.touches[0].clientX-sx,dy=e.touches[0].clientY-sy;GF.style.left=Math.max(0,Math.min(sl+dx,window.innerWidth-GF.offsetWidth))+'px';GF.style.top=Math.max(0,Math.min(st+dy,window.innerHeight-48))+'px';},{passive:false});
-document.addEventListener('touchend',function(){if(dr){dr=false;GF.style.transition='opacity .25s ease, transform .25s ease';}});}
-document.addEventListener('keydown',function(e){if(e.key==='Escape'&&GF.classList.contains('active'))cGF();});
-console.log('✓ 管家玉个人网站已就绪');
-document.getElementById('pdf-close-btn').addEventListener('click',function(){document.getElementById('pdf-preview').classList.remove('visible');document.getElementById('pdf-iframe').src='';document.body.style.overflow='';});
-
-})();
-</script>
+TH.addEventListener('click',function(){document.body.classList.toggle('dark');try{localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light')}catch(e){}});
+var tTimer;
+function toast(m){clearTimeout(tTimer);T.textContent=m;T.classList.add('show');tTimer=setTimeout(function(){T.classList.remove('show')},1800);}
+function copy(t){try{navigator.clipboard.writeText(t);toast('已复制：'+t);}catch(e){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);toast('已复制：'+t);}}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-copy]');if(!b)return;e.preventDefault();copy(b.getAttribute('data-copy'));b.classList.add('copied');setTimeout(function(){b.classList.remove('copied')},1200);});
+var tActive=false,tEl=null;
+function showTT(el,img,lbl){tActive=true;tEl=el;TI.src=img;TI.onerror=function(){TI.style.display='none';TL.textContent=lbl};TI.onload=function(){TI.style.display='block'};TI.style.display='block';TL.textContent=lbl||'';TT.classList.add('visible');posTT(el);}
+function hideTT(){tActive=false;tEl=null;TT.classList.remove('visible');}
+function posTT(el){var r=el.getBoundingClientRect(),w=TT.offsetWidth||160,h=TT.offsetHeight||100,l=r.left+r.width/2,t=r.bottom+10;if(l-w/2<8)l=w/2+8;if(l+w/2>window.innerWidth-8)l=window.innerWidth-w/2-8;if(t+h>window.innerHeight-20)t=r.top-h-10;TT.style.left=l+'px';TT.style.top=t+'px';TT.style.transform='translate(-50%,0)';}
+document.addEventListener('mouseover',function(e){var el=e.target.closest('[data-has-tooltip="true"]');if(el)showTT(el,el.getAttribute('data-tooltip-img')||'',el.getAttribute('data-tooltip-label')||'');else if(!e.target.closest('#global-tooltip'))hideTT();});
+document.addEventListener('mousemove',function(e){if(!tActive||!tEl||window.innerWidth<=768)return;var l=e.clientX,t=e.clientY+15,w=TT.offsetWidth||160,h=TT.offsetHeight||100;if(l-w/2<8)l=w/2+8;if(l+w/2>window.innerWidth-8)l=window.innerWidth-w/2-8;if(t+h>window.innerHeight-20)t=e.clientY-h-15;TT.style.left=l+'px';TT.style.top=t+'px';TT.style.transform='translate(-50%,0)';});
+document.addEventListener('mouseout',function(e){if(e.target.closest('[data-has-tooltip="true"]')&&!e.relatedTarget)hideTT();});
+TT.addEventListener('mouseleave',hideTT);
+window.addEventListener('resize',function(){if(tActive&&tEl)posTT(tEl);});
+function showAll(){SB.forEach(function(b){b.classList.add('visible')});MC.classList.remove('hidden-sections');updateNav('all');}
+function showSection(s){MC.classList.add('hidden-sections');SB.forEach(function(b){b.getAttribute('data-section')===s?b.classList.add('visible'):b.classList.remove('visible')});updateNav(s);var t=MC.querySelector('[data-section="'+s+'"]');if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}
+function updateNav(s){NL.forEach(function(l){l.classList.remove('active');if(l.getAttribute('data-section')===s)l.classList.add('active')})}
+NL.forEach(function(l){l.addEventListener('click',function(){var s=this.getAttribute('data-section');s==='all'?showAll():showSection(s)})});
+NB.addEventListener('click',showAll);showAll();
+var pU='内蒙古工业大学-管家玉.pdf',pN='内蒙古工业大学-管家玉.pdf',isFile=window.location.protocol==='file:';
+function openPDF(){window.open(encodeURI(pU),'_blank','noopener');}
+function downloadPDF(){var u=encodeURI(pU);if(isFile){toast('正在下载简历..');window.location.href=u;return;}toast('正在下载简历..');fetch(u).then(function(r){if(!r.ok)throw Error();return r.blob()}).then(function(b){var url=URL.createObjectURL(new Blob([b],{type:'application/pdf'}));var a=document.createElement('a');a.href=url;a.download=pN;document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(url)},2000);toast('下载完成');}).catch(function(){toast('跳转下载..');window.location.href=u});}
+document.getElementById('hero-resume-btn').addEventListener('click',function(e){if(window.innerWidth>768){e.preventDefault();var pdfDiv=document.getElementById('pdf-preview'),iframe=document.getElementById('pdf-iframe');iframe.src=encodeURI(pU);pdfDiv.classList.add('visible');document.body.style.overflow='hidden';}else{toast('正在打开简历..')}});
+window.addEventListener('scroll',function(){window.scrollY>400?BT.classList.add('show'):BT.classList.remove('show')},{passive:true});
+BT.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+PB.addEventListener('click',function(){showAll();setTimeout(function(){window.print()},150)});
+var eP=[document.getElementById('exp-panel-0'),document.getElementById('exp-panel-1')];
+var eT=[document.getElementById('exp-tab-0'),document.getElementById('exp-tab-1')];
+['offcampus','oncampus'].forEach(function(c,i){var items=resume.experiences.filter(function(e){return e.cat===c});eP[i].innerHTML=items.length?items.map(function(e){return '<div class="exp-card reveal-up"><div class="exp-header"><span class="exp-title">'+e.title+'</span><span class="exp-meta"> / '+e.role+' / '+e.period+'</span></div><ul>'+e.points.map(function(p){return '<li>'+p+'</li>'}).join('')+'</ul></div>'}).join(''):'<p style="color:var(--text3);font-size:.7rem;padding:8px;">暂无相关经历</p>'});
+eT.forEach(function(t,i){t.addEventListener('click',function(){eT.forEach(function(x){x.setAttribute('aria-selected','false')});eP.forEach(function(x){x.setAttribute('aria-hidden','true')});t.setAttribute('aria-selected','true');eP[i].setAttribute('aria-hidden','false')})});
+document.getElementById('skill-grid').innerHTML=resume.skills.map(function(c){return '<div class="skill-category reveal-up"><div class="skill-cat-title">'+c.cat+'</div><div style="padding:6px 0;font-size:.72rem;color:var(--text2)">'+c.items.join('、')+'</div></div>'}).join('');
+(function(){var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;entry.target.classList.add('revealed');obs.unobserve(entry.target)})},{threshold:0.1});document.querySelectorAll('.reveal,.reveal-up,.reveal-scale').forEach(function(el){obs.observe(el)})})();
+(function(){var visited=false;try{visited=localStorage.getItem('visited')==='true'}catch(e){}if(visited){O.style.display='none';O.setAttribute('aria-hidden','true');return;}try{localStorage.setItem('visited','true')}catch(e){}var skipped=false;function skipIntro(){if(skipped)return;skipped=true;O.classList.add('fade-out');setTimeout(function(){O.style.display='none';O.setAttribute('aria-hidden','true')},400);}IT.innerHTML='';var cs=document.createElement('span');cs.className='cursor-blink';IT.appendChild(cs);var txt='欢迎访问我的个人网站';var ci=0;var ti=setInterval(function(){if(ci<txt.length){cs.before(document.createTextNode(txt[ci]));ci++}else{clearInterval(ti);setTimeout(function(){if(!skipped)skipIntro()},1200)}},45);O.addEventListener('click',skipIntro,{once:true})})();
+var LB=document.getElementById('image-lightbox'),LI=document.getElementById('lightbox-img');var LC=document.getElementById('lightbox-caption'),LX=document.getElementById('lightbox-close');function openLB(i){LI.src=i.src;LC.textContent=i.alt||'';LB.classList.add('visible');document.body.style.overflow='hidden';}function closeLB(){LB.classList.remove('visible');document.body.style.overflow='';}LB.addEventListener('click',closeLB);LX.addEventListener('click',function(e){e.stopPropagation();closeLB()});LI.addEventListener('click',function(e){e.stopPropagation()});document.addEventListener('dblclick',function(e){var i=e.target.closest('img');if(i&&!e.target.closest('#global-tooltip')&&!e.target.closest('#image-lightbox'))openLB(i)});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&LB.classList.contains('visible'))closeLB()});
+var GF=document.getElementById('game-float'),GI=document.getElementById('game-float-iframe');var GH=document.getElementById('game-float-header'),GT=document.getElementById('game-thumbnail');var GC=document.getElementById('game-float-close'),GFf=document.getElementById('game-float-fullscreen');var gU='飞机.html',gL=false;function openGF(){if(!gL){GI.src=gU;gL=true;}var w=Math.min(400,window.innerWidth*0.92),h=Math.min(500,window.innerHeight*0.8);GF.style.width=w+'px';GF.style.height=h+'px';GF.style.left=((window.innerWidth-w)/2)+'px';GF.style.top=((window.innerHeight-h)/2)+'px';GF.classList.add('active');GF.setAttribute('aria-hidden','false');}function closeGF(){GF.classList.remove('active');GF.setAttribute('aria-hidden','true');}if(GT)GT.addEventListener('click',openGF);if(GC)GC.addEventListener('click',closeGF);if(GFf)GFf.addEventListener('click',function(){if(GI.requestFullscreen)GI.requestFullscreen()});if(GH&&GF){var drag=false,sx,sy,sl,st;GH.addEventListener('mousedown',function(e){if(e.target.closest('.game-float-btn'))return;drag=true;sx=e.clientX;sy=e.clientY;sl=GF.offsetLeft;st=GF.offsetTop;GF.style.transition='none';e.preventDefault()});document.addEventListener('mousemove',function(e){if(!drag)return;GF.style.left=Math.max(0,Math.min(sl+e.clientX-sx,window.innerWidth-GF.offsetWidth))+'px';GF.style.top=Math.max(0,Math.min(st+e.clientY-sy,window.innerHeight-48))+'px'});document.addEventListener('mouseup',function(){if(drag){drag=false;GF.style.transition=''}});GH.addEventListener('touchstart',function(e){if(e.target.closest('.game-float-btn'))return;drag=true;sx=e.touches[0].clientX;sy=e.touches[0].clientY;sl=GF.offsetLeft;st=GF.offsetTop;GF.style.transition='none'},{passive:false});document.addEventListener('touchmove',function(e){if(!drag)return;var dx=e.touches[0].clientX-sx,dy=e.touches[0].clientY-sy;GF.style.left=Math.max(0,Math.min(sl+dx,window.innerWidth-GF.offsetWidth))+'px';GF.style.top=Math.max(0,Math.min(st+dy,window.innerHeight-48))+'px'},{passive:false});document.addEventListener('touchend',function(){if(drag){drag=false;GF.style.transition=''}})}document.addEventListener('keydown',function(e){if(e.key==='Escape'&&GF.classList.contains('active'))closeGF()});document.getElementById('pdf-close-btn').addEventListener('click',function(){document.getElementById('pdf-preview').classList.remove('visible');document.getElementById('pdf-iframe').src='';document.body.style.overflow='';});
+})();</script>
 
 </body>
 </html>
